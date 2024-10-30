@@ -3,6 +3,7 @@ from django.utils import timezone
 
 from factory.django import DjangoModelFactory
 from factory import Faker, Sequence
+from .models import AppUser
 
 
 class AuthUserFactory(DjangoModelFactory):
@@ -11,7 +12,7 @@ class AuthUserFactory(DjangoModelFactory):
     """
 
     class Meta:
-        model = get_user_model()
+        model = AppUser
 
     password = Faker("password")
     first_name = Faker("first_name", locale="ja_jp")
