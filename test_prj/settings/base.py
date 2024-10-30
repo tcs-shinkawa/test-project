@@ -197,3 +197,5 @@ SOCIAL_AUTH_PIPELINE = (
 )
 
 CORS_ALLOW_CREDENTIALS = True
+
+AUTH_USER_MODEL = "authentication.AppUser"
